@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<title>Taks Page</title>
+{% endblock %}	
+
+{% block body %}
+	<h1>Tasks managerment</h1>
+	<div class="content">
+		<table>
+			<tr>
+				<th>Task ID</th>
+				<th>Task</th>
+				<th>Acions</th>
+			</tr>
+			{% for task in tasks %}
+			<tr>
+				<td>{{ task.id }}</td><br>
+				<td>{{ task.task }}</td><br>
+				<td>
+					<a href="/tasks/delete/{{ task.id}}">Delete</a><br>
+					<a href="/tasks/update/{{ task.id}}">Update</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+	<form method="POST" action="">
+		<input type="text" name="task">
+		<input type="submit" value="Add">
+	</form>
+
+
+	</div>
+
+{% endblock %}

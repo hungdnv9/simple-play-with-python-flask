@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<title>Taks Page</title>
+{% endblock %}	
+
+{% block body %}
+	<h1>Tasks Update</h1>
+	<form method="POST" action="">
+		<input type="text" name="task" value="{{ task.task}}">
+		<input type="submit" value="Update">
+	</form>
+
+
+	</div>
+
+{% endblock %}
